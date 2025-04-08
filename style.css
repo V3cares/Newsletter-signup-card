@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{ 
+    height: 100vh;
+background-color: hsl(235, 18%, 26%);
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+article{
+    width: 700px;
+    padding:20px;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+}
+
+.img-container{
+    background-image: url(illustration-sign-up-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   width: 300px;
+   border-radius: 10px;
+}
+
+.text-container{
+    width: 400px;
+    padding-top: 40px ;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 0;
+    display: inline-block;
+}
+
+h1{
+    font-size: 33px;
+    font-weight: 700;
+    color: hsl(234, 29%, 20%);
+    margin-bottom: 10px;
+}
+
+p{
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: hsl(234, 29%, 20%);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+ol li{
+    width: 100%;
+   background-image: url(icon-list.svg);
+   background-repeat: no-repeat;
+   padding-left: 30px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   list-style: none;
+   background-position: 0 5px;
+   font-size: 10px;
+}
+
+
+input{
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+label{
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    color: hsl(234, 29%, 20%);
+    margin-bottom: 8px;
+}
+
+#emailError{
+    color: hsl(4, 100%, 67%);
+    font-size: 10px;
+    font-weight: 700;
+    display: inline-block;
+    width: 75%;
+    text-align: right;
+}
+
+input[type=email]{
+    border: 1px double hsl(0, 0%,58%);
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type=email]:focus{
+    background: none;
+    background-color: transparent;
+    outline: none;
+}
+
+
+#submitBtn{
+    background-color: hsl(234, 29%, 20%);
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+}
+
+#submitBtn:hover{
+    background: hsl(4, 100%, 67%);
+    transition: all .2s ease;
+}
+
+::placeholder{
+    display: inline-block;
+    margin-left: 15px;
+    padding-left: 10px;
+    color: hsl(0, 0%,58%);
+    font-weight: 500;
+}
+
+.success-message{
+    background-color: #fff;
+    width: 300px;
+    padding: 25px;
+    border-radius: 7px;
+    margin-top: 5px;
+    position: absolute;
+    top: 30%;
+    left: 38%;
+    display: none;
+}
+
+.success-message img{
+    display: inline-block;
+    width: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.success-message h1{
+    line-height: 1;
+}
+
+.success-message p{
+    font-size: 11px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.dismissal-btn{
+    width: 100%;
+    border: none;
+    background-color: hsl(234, 29%, 20%);
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.dismissal-btn:hover,
+.dismissal-btn:active{
+    background-color: hsl(4, 100%, 67%);
+    transition: all .3s ease;
+    color: #fff;
+}
+
+
+@media (max-width: 375px) {
+    body{
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        background-color: #fff;
+    }
+
+    article{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .img-container{
+        background: url(illustration-sign-up-mobile.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 190px;
+    }
+
+    .text-container{
+        width: 90%;
+        padding: 10px 0;
+    }
+
+    label{
+        display: inline-block;
+        margin-bottom: 0;
+        transform: translateY(15px);
+    }
+
+    .success-message{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        transform: translateY(-50px);
+    }
+
+    .success-message img{
+        display: inline-block;
+        width: 50px;
+    }
+
+    .success-message h1{
+        margin-bottom: 15px;
+    }
+
+    .dismissal-btn{
+        transform: translateY(140px);
+    }
+}
